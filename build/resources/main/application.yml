@@ -1,0 +1,26 @@
+server:
+  port: 19002
+
+spring:
+  application:
+    name: ACCOUNT-SERVICE
+  r2dbc:
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: r2dbc:mysql://192.168.75.87:3333/aibees?serverTimezone=UTC&characterEncoding=UTF-8&sslMode=DISABLED
+    username: aibees
+    password: qkrqwe12#
+
+  jpa:
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: none
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone : http://aibees1129:qkr12wns3!@localhost:19001/eureka/
+  instance:
+    prefer-ip-address: true
